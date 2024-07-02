@@ -17,3 +17,8 @@ def read_root(request: Request):
 def get_contact(request:Request):
     print("contact request coming")
     return templates.TemplateResponse("contact.html" , {"request": request})
+
+@app.get('/plans' , response_class=HTMLResponse)
+def get_plans(request:Request):
+    print("plans request coming")
+    return templates.TemplateResponse("plans.html" , {"request": request})
