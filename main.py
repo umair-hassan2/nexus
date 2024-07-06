@@ -26,7 +26,7 @@ def get_plans(request:Request):
 @app.get('/faq' , response_class=HTMLResponse)
 def get_faq(request:Request):
     print("faq request coming")
-    return templates.TemplateResponse("faq.html" , {"request": request})
+    return templates.TemplateResponse("FAQ.html" , {"request": request})
 
 @app.get('/privacy-policy' , response_class=HTMLResponse)
 def get_privacy(request:Request):
