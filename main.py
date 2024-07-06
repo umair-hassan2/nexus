@@ -22,3 +22,13 @@ def get_contact(request:Request):
 def get_plans(request:Request):
     print("plans request coming")
     return templates.TemplateResponse("plans.html" , {"request": request})
+
+@app.get('/faq' , response_class=HTMLResponse)
+def get_faq(request:Request):
+    print("faq request coming")
+    return templates.TemplateResponse("faq.html" , {"request": request})
+
+@app.get('/privacy-policy' , response_class=HTMLResponse)
+def get_privacy(request:Request):
+    print("privacy request coming")
+    return templates.TemplateResponse("privacy.html" , {"request": request})

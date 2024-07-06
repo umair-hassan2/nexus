@@ -253,28 +253,31 @@
             arrows: true,
             dots: false,
             infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 3, // Show 3 slides at a time
+            slidesToScroll: 1, // Scroll 3 slides at a time
             adaptiveHeight: true,
             pauseOnFocus: false,
             autoplaySpeed: 1500,
             responsive: [
                 {
-                    breakpoint: 900,
+                    breakpoint: 1024, // Adjusted for a wider range of devices
                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToShow: 2, // Show 2 slides at a time on smaller screens
+                        slidesToScroll: 2 // Scroll 2 slides at a time
                     }
                 },
                 {
-                    breakpoint: 800,
+                    breakpoint: 600, // Adjusted for mobile devices
                     settings: {
-                        arrows: false,
-                        dots: true
+                        slidesToShow: 1, // Show 1 slide at a time on very small screens
+                        slidesToScroll: 1, // Scroll 1 slide at a time
+                        arrows: false, // Optional: Hide arrows on very small screens
+                        dots: true // Optional: Show dots navigation on very small screens
                     }
                 }
             ]
         });
+        
     
     };
 
