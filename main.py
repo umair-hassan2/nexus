@@ -2,8 +2,13 @@ from fastapi import Request , FastAPI
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from pydantic import BaseModel
 
 app = FastAPI()
+
 
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="./static"), name="static")
