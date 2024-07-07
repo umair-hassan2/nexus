@@ -5,6 +5,7 @@ from fastapi.staticfiles import StaticFiles
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import requests
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -37,3 +38,4 @@ def get_faq(request:Request):
 def get_privacy(request:Request):
     print("privacy request coming")
     return templates.TemplateResponse("privacy.html" , {"request": request})
+
