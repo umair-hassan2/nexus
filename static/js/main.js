@@ -89,10 +89,10 @@
 
         // close menu clicking outside the menu itself
         siteBody.on('click', function(e){
-            if( !$(e.target).is('.header-nav, .header-nav__content, .header-menu-toggle, .header-menu-toggle span') ) {
-                // menuTrigger.removeClass('is-clicked');
-                siteBody.removeClass('menu-is-open');
-            }
+            // if( !$(e.target).is('.header-nav, .header-menu-toggle, .header-menu-toggle span') ) {
+            //     // menuTrigger.removeClass('is-clicked');
+            //     siteBody.removeClass('menu-is-open');
+            // }
         });
 
     };
@@ -250,14 +250,14 @@
         });
 
         $('.testimonials').slick({
-            arrows: true,
             dots: false,
             infinite: true,
             slidesToShow: 3, // Show 3 slides at a time
-            slidesToScroll: 1, // Scroll 3 slides at a time
+            slidesToScroll: 1, // Scroll 1 slide at a time
             adaptiveHeight: true,
             pauseOnFocus: false,
-            autoplaySpeed: 1500,
+            autoplay: true, // Enable autoplay
+            autoplaySpeed: 1500, // Time in milliseconds before sliding to the next item            
             responsive: [
                 {
                     breakpoint: 1024, // Adjusted for a wider range of devices

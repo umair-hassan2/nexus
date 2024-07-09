@@ -1,3 +1,24 @@
+<style>
+    .whiteColor{
+        color: white;
+        margin-left: 1.5rem;
+    }
+    .services-link{
+        transition: all 1s ease;
+    }
+    .services-link:hover{
+        cursor: pointer;
+    }
+
+    .displayNone{
+        display: none;
+    }
+    .dropdown{
+        transition: all 2s ease;
+    }
+
+</style>
+
 <div class="firstBar sticky nav">
     <div style="display: flex;align-items: center;" class="logo">
         <img style="width: 6.5rem;margin-right: 10px;" src="../static/images/Nlogo.png" alt="image here">
@@ -9,7 +30,14 @@
     <ul class="navbar__list">
         <li class="current"><a class="smoothscroll"  href="./" title="home">Home</a></li>
         <li><a class="smoothscroll"  href="./#about" title="about">About</a></li>
-        <li><a class="smoothscroll"  href="./#services" title="services">Services</a></li>
+        <li><a class="smoothscroll"  href="./#services" title="services">Services</a>
+            <ul class="dropdown">
+                <li><a class="smoothscroll" href="./spotify-service" title="one">Spotify</a></li>
+                <li><a class="smoothscroll" href="./youtube-service" title="two">Youtube</a></li>
+                <li><a class="smoothscroll" href="#three" title="three">Three</a></li>
+                <li><a class="smoothscroll" href="#four" title="four">Four</a></li>
+            </ul>
+        </li>
         <li><a class="smoothscroll"  href="./plans" title="plans">Plans & Pricing</a></li>
         <li><a class="smoothscroll"  href="./#clients" title="clients">Clients</a></li>
         <li><a class="smoothscroll"  href="./faq" title="contact">FAQ</a></li>
@@ -42,7 +70,21 @@
             <ul class="header-nav__list">
                 <li class="current"><a class="smoothscroll"  href="./" title="home">Home</a></li>
                 <li><a class="smoothscroll"  href="./#about" title="about">About</a></li>
-                <li><a class="smoothscroll"  href="./#services" title="services">Services</a></li>
+                <li class="services-link">
+                    <div style="display: flex;align-items: center;" id="service-sec" >
+                        <p style="margin: 0;color: white;" class="services-link" title="services">Services</p>
+                        <i
+                        style="transform: rotate(360deg); transition: transform 0.5s ease 0s;"
+                         id="dropdownIcon" class="ri-arrow-down-s-line whiteColor"></i> <!-- Dropdown Icon -->
+                    </div>
+
+                    <ul id="dropMenu" class="displayNone dropdown">
+                        <li><a class="smoothscroll" href="./spotify-service" title="one">Spotify</a></li>
+                        <li><a class="smoothscroll" href="./youtube-service" title="two">Youtube</a></li>
+                        <li><a class="smoothscroll" href="#three" title="three">Three</a></li>
+                        <li><a class="smoothscroll" href="#four" title="four">Four</a></li>
+                    </ul>
+                </li>
                 <li><a class="smoothscroll"  href="./plans" title="plans">Plans & Pricing</a></li>
                 <li><a class="smoothscroll"  href="./#clients" title="clients">Clients</a></li>
                 <li><a class="smoothscroll"  href="./faq" title="contact">FAQ</a></li>
@@ -50,24 +92,19 @@
                 <li><a class="smoothscroll"  href="./contact" title="contact">Contact</a></li>
             </ul>
 
-            <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+            <p>We are <a href="./"> Nexuss Marketing </a>, boosting rappers and influencers with powerful branding and digital marketing.</p>
 
             <ul class="header-nav__social">
+                <li>
+                    <a href="https://www.instagram.com/nexussmarketing/"><i class="fa fa-instagram"></i></a>
+                </li>
                 <li>
                     <a href="#"><i class="fa fa-facebook"></i></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
-                <li>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-behance"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                </li>
+
             </ul>
 
         </div> <!-- end header-nav__content -->

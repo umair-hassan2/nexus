@@ -1,70 +1,102 @@
-body
-{
+body {
     margin: 0;
     padding: 0;
     font-family: arial, sans-serif;
 }
-.nav{
+
+.nav {
     background: black;
     color: #FFF;
-    display: flex
+    display: flex;
 }
-.nav .logo{
+
+.nav .logo {
     font-size: 10px;
     padding: 20px;
-    margin-left: 25px
+    margin-left: 25px;
 }
-.nav .logo a{
+
+.nav .logo a {
     color: #FFF;
-    text-decoration: none
+    text-decoration: none;
 }
-.nav ul{
+
+.nav ul {
     margin: 0;
     padding: 0;
     display: flex;
     width: 65%;
-    margin-left: auto
+    margin-left: auto;
 }
-.nav ul li{
+
+.nav ul li {
     padding: 20px;
-    list-style: none
+    list-style: none;
+    position: relative;
 }
-.nav ul li a{
+
+.nav ul li a {
     color: #FFF;
     display: block;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: bold
+    font-weight: bold;
 }
-.sticky{
+
+.nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background: black;
+    top: 60px;
+    left: 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.nav ul li .dropdown li {
+    padding: 10px 20px;
+}
+
+.nav ul li .dropdown li a {
+    color: #FFF;
+    text-transform: none;
+}
+
+.nav ul li:hover .dropdown {
+    display: block;
+}
+
+.sticky {
     position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
-    width: 100%
+    width: 100%;
 }
 
-.secondBar{
+.secondBar {
     display: none;
 }
 
-.navbar__list{
+.navbar__list {
     color: rgba(255, 255, 255, 0.25);
     font-family: "montserrat-light", sans-serif;
     font-size: 1.4rem;
 }
 
-.firstBar{
+.firstBar {
     display: flex;
     align-items: center;
 }
 
+
+
 @media only screen and (max-width: 1200px) {
-    .firstBar{
-        display:none;
+    .firstBar {
+        display: none;
     }
 
-    .secondBar{
+    .secondBar {
         display: block;
     }
 }

@@ -1,38 +1,38 @@
-// $(window).scroll(function(){
-//     if(1 === 0){
-//         $('.firstBar').addClass('gayab');
-//         $(".secondBar").removeClass("gayab");
-//     } else{
-//         $('.firstBar').removeClass('gayab');
-//         $(".secondBar").addClass("gayab");
-//     }
-// });
-let isRotated = false;
-document.getElementsByClassName("services-link")[0].addEventListener("click" , (e)=>{
-    e.preventDefault();
-    console.log("clicked");
-    $('#dropMenu').toggleClass("displayNone");
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-    if (!isRotated) {
-        $('#dropdownIcon').css({
-            'transform': 'rotate(180deg)',
-            'transition': 'transform 0.5s ease'
-        });
-        isRotated = true;
-    } else {
-        $('#dropdownIcon').css({
-            'transform': 'rotate(360deg)', // Rotating back to the original position
-            'transition': 'transform 0.5s ease'
-        });
-        isRotated = false;
-    }
+{%include "components/header.html"%}
 
-})
+<body id="top" class="hero">
 
-// a function to fetch pictures for slider
-function fetchImages(imagePaths){
-    return `
-                    <div class="row clients-testimonials" data-aos="fade-up">
+    <!-- header
+    ================================================== -->
+    {% include "components/navbar.html" %}
+
+    <!-- SPOTIFY SECTION CONTENT
+    ================================================== -->
+    <section style="padding-bottom: 0;" id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+    
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Services</h3>
+                <h1 class="display-2 display-2--light">Spotify Services</h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="accordion__wrapper">
+            <div class="spotify-content">
+                <p>Step into our Spotify Campaign, where we harness the dynamic capabilities of Meta Ads and algorithmic playlists to propel your music to new heights. Our innovative approach ensures that every campaign is strategically optimized to drive streams and maximize engagement. By leveraging Meta Ads, we target your audience with precision, placing your music in front of listeners who are most likely to connect with your sound.</p>
+                <div class="row clients-testimonials" data-aos="fade-up">
                     <div class="col-full">
                         <div class="testimonials">
                             <div>
@@ -111,5 +111,40 @@ function fetchImages(imagePaths){
                         
                     </div> <!-- end col-full -->
                 </div> <!-- end client-testimonials -->
-    `;
-}
+                <p>
+                    Simultaneously, algorithmic playlists amplify your reach organically, placing your tracks alongside similar artists and genres, expanding your fanbase with every play. At the heart of our strategy lies a commitment to enhancing your Spotify presence. We don't just aim to increase streams; we aim to foster a lasting connection between your music and your audience.
+                </p>
+
+                <p>
+                    Our data-driven insights empower us to refine your campaign continuously, adapting to audience behaviors and preferences in real-time. Whether you're an emerging artist seeking to break through or an established act aiming for sustained growth, our tailored approach ensures that your music resonates with listeners across the platform. Join us on this journey to unlock the full potential of your music.
+                </p>
+
+                <p>
+                    Experience firsthand how Meta Ads and algorithmic playlists can transform your Spotify presence into a powerful force in the music industry. Elevate your visibility, drive engagement, and cultivate a dedicated fanbase that stays connected with your music journey every step of the way.
+                </p>
+            </div>
+        </div>       
+    </section>
+
+    <!-- footer
+    ================================================== -->
+    {% include "components/footer.html" %}
+
+
+    <!-- preloader
+    ================================================== -->
+    {% include "components/loader.html" %}
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/plugins.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/jquery.sticky.js"></script>
+    <script src="../static/js/main2.js"></script>
+    <script src="../static/js/nav_script.js"></script>
+</body>
+
+</html>
