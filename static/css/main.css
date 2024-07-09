@@ -100,7 +100,7 @@ a {
 }
 
 a:hover, a:focus, a:active {
-    color: #b56639;
+    color: #b95e2b;
 }
 
 a:hover, a:active {
@@ -116,7 +116,7 @@ a:hover, a:active {
 h1, h2, h3, h4, h5, h6, 
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "montserrat-medium", sans-serif;
-    color: #000000;
+    color: white;
     font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
@@ -371,7 +371,7 @@ ul.disc li::before {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #b56639;
+    background: #b95e2b;
     position: absolute;
     left: -17px;
     top: 11px;
@@ -380,7 +380,7 @@ ul.disc li::before {
 
 dt {
     margin: 0;
-    color: #b56639;
+    color: #b95e2b;
 }
 
 dd {
@@ -506,7 +506,7 @@ form,
 }
 
 .pace .pace-progress {
-    background: #b56639;
+    background: #b95e2b;
     position: fixed;
     z-index: 900;
     top: 0;
@@ -549,7 +549,7 @@ form,
 }
 
 .line-scale-pulse-out > div {
-    background-color: #b56639;
+    background-color: #b95e2b;
     width: 4px;
     height: 35px;
     border-radius: 2px;
@@ -776,7 +776,7 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    -webkit-text-fill-color: #b56639;
+    -webkit-text-fill-color: #b95e2b;
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -836,8 +836,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-    background: #b56639;
-    border-color: #b56639;
+    background: #b95e2b;
+    border-color: #b95e2b;
     color: #FFFFFF;
 }
 
@@ -851,7 +851,7 @@ button.btn--primary:focus,
 input[type="submit"].btn--primary:focus,
 input[type="reset"].btn--primary:focus,
 input[type="button"].btn--primary:focus {
-    background: #b56639;
+    background: #b95e2b;
 }
 
 
@@ -875,8 +875,8 @@ input[type="button"].btn--primary:focus {
 
 .btn--stroke, button.btn--stroke {
     background: transparent !important;
-    border: 0.2rem solid #b56639;
-    color: #b56639;
+    border: 0.2rem solid #b95e2b;
+    color: #b95e2b;
 }
 
 .btn--stroke:hover, button.btn--stroke:hover {
@@ -1104,7 +1104,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .stats-tabs li a:hover {
-    color: #b56639;
+    color: #b95e2b;
 }
 
 .stats-tabs li a em {
@@ -1231,7 +1231,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     font-family: "montserrat-medium", sans-serif;
     font-size: 5.2rem;
     line-height: 1.255;
-    color: #000000;
+    color: white;
     margin-top: 0;
 }
 
@@ -1249,7 +1249,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     line-height: 1.333;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    color: #b56639;
+    color: #b95e2b;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -1423,7 +1423,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .slick-slider .slick-dots li.slick-active button,
 .slick-slider .slick-dots li:hover button {
-    background: #b56639;
+    background: #b95e2b;
 }
 
 
@@ -1516,7 +1516,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     letter-spacing: .25rem;
     margin-bottom: 4.8rem;
     margin-top: .9rem;
-    color: #b56639;
+    color: #b95e2b;
 }
 
 .header-nav p {
@@ -1654,7 +1654,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
-    color: #b56639;
+    color: #b95e2b;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
@@ -1862,8 +1862,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__scroll a::before {
-    border-bottom: 2px solid #b56639;
-    border-right: 2px solid #b56639;
+    border-bottom: 2px solid #b95e2b;
+    border-right: 2px solid #b95e2b;
     content: '';
     display: block;
     height: 8px;
@@ -1887,7 +1887,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     display: block;
     width: 2px;
     height: 10.2rem;
-    background-color: #b56639;
+    background-color: #b95e2b;
     position: absolute;
     right: 7.2rem;
     bottom: 0;
@@ -1947,7 +1947,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-social span {
-    color: #b56639;
+    color: #b95e2b;
     right: 4.5rem;
     font-size: 1.3rem;
     opacity: 0;
@@ -2203,7 +2203,7 @@ html.no-csstransitions .home-content__main {
 .s-about {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #b57339;
+    background-color: #b95e2b;
     color: #010507;
     position: relative;
 }
@@ -2373,8 +2373,9 @@ html.no-csstransitions .home-content__main {
 .s-services {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
-    background-color: #FFFFFF;
-    color: #757575;
+    background-color: black;
+    /*color: #757575;*/
+    color: white;
     position: relative;
 }
 
@@ -2408,7 +2409,7 @@ html.no-csstransitions .home-content__main {
 
 .services-list .service-icon {
     float: left;
-    color: #b56639;
+    color: #b95e2b;
     font-size: 4.8rem;
     margin-top: -.6rem;
 }
@@ -2735,7 +2736,7 @@ html.no-csstransitions .home-content__main {
 .s-clients {
     padding-top: 16.2rem;
     padding-bottom: 16.8rem;
-    background-color: #e6e6e6;
+    background-color: #b95e2b;
     color: #757575;
     position: relative;
 }
@@ -2753,7 +2754,7 @@ html.no-csstransitions .home-content__main {
 
 .clients__slide {
     display: block;
-    opacity: .55;
+    opacity: 1;
     padding: 1.5rem 2.8rem;
     -webkit-transition: opacity 0.5s ease-in-out;
     transition: opacity 0.5s ease-in-out;
@@ -2977,7 +2978,7 @@ html.no-csstransitions .home-content__main {
     padding: 0 2rem;
     margin: 0;
     color: #FFFFFF;
-    background: #b56639;
+    background: #b95e2b;
 }
 
 .s-contact .form-field label::after {
@@ -2988,14 +2989,14 @@ html.no-csstransitions .home-content__main {
     margin-top: -6px;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-right: 5px solid #b56639;
+    border-right: 5px solid #b95e2b;
 }
 
 .contact__line {
     display: block;
     width: 2px;
     height: 20.4rem;
-    background-color: #b56639;
+    background-color: #b95e2b;
     position: absolute;
     left: 50%;
     top: -10.2rem;
@@ -3022,7 +3023,7 @@ html.no-csstransitions .home-content__main {
 
 .contact-content h5 {
     margin-top: 0;
-    color: #b56639;
+    color: #b95e2b;
 }
 
 .contact-content input[type="email"],
@@ -3049,7 +3050,7 @@ html.no-csstransitions .home-content__main {
 .contact-content textarea:focus,
 .contact-content select:focus {
     color: #FFFFFF;
-    border-bottom: 1px solid #b56639;
+    border-bottom: 1px solid #b95e2b;
 }
 
 .contact-content button,
@@ -3140,7 +3141,7 @@ html.no-csstransitions .home-content__main {
 
 .contact-social li a:hover, 
 .contact-social li a:focus {
-    color: #b56639;
+    color: #b95e2b;
 }
 
 .contact-social li:last-child {
@@ -3163,7 +3164,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .message-success {
-    color: #b56639;
+    color: #b95e2b;
 }
 
 .message-warning i, .message-success i {
@@ -3355,7 +3356,7 @@ footer a {
 }
 
 footer a:hover, footer a:focus, footer a:active {
-    color: #b56639;
+    color: #b95e2b;
 }
 
 footer .row {
@@ -3447,8 +3448,8 @@ footer .row {
     top: 0;
     right: 0;
     color: #FFFFFF;
-    background: #b56639;
-    border-color: #b56639;
+    background: #b95e2b;
+    border-color: #b95e2b;
     padding: 0 20px;
 }
 

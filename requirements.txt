@@ -2,3 +2,5 @@ jinja2
 fastapi
 uvicorn
 mailtrap
+pydantic
+fastapi-mail

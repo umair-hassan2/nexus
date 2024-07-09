@@ -54,6 +54,11 @@ body
     font-size: 1.4rem;
 }
 
+.firstBar{
+    display: flex;
+    align-items: center;
+}
+
 @media only screen and (max-width: 1200px) {
     .firstBar{
         display:none;

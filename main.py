@@ -2,7 +2,6 @@ from fastapi import Request , FastAPI
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
-import mailtrap as mt
 
 app = FastAPI()
 
@@ -34,6 +33,7 @@ def get_faq(request:Request):
 def get_privacy(request:Request):
     print("privacy request coming")
     return templates.TemplateResponse("privacy.html" , {"request": request})
+
 
 
 

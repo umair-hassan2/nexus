@@ -55,6 +55,13 @@
 	 padding: 2rem 1.5rem;
 	 display: inline-flex;
 	 flex-direction: column;
+	 transition: all 0.3s ease-in-out;
+}
+
+.planItem:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  background-color: #b95e2b;
 }
  .planItem__container {
 	 --direction: column;
