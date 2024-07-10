@@ -1,10 +1,21 @@
-from fastapi import Request , FastAPI
+import os
+from fastapi import Request , FastAPI,status,HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 import mailtrap as mt
+from pydantic import BaseModel
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
+
+class email_template(BaseModel):
+    name:str
+    email:str
+    message:str
+    subject:str
 
 
 templates = Jinja2Templates(directory="templates")
@@ -45,20 +56,26 @@ def get_spotify_service(request:Request):
     print("Youtube service request coming")
     return templates.TemplateResponse("youtube.html" , {"request": request})
 
-def send_message():
+def send_message(sender_name:str , sender_email:str , message:str , subject:str):
     mail = mt.Mail(
-        sender=mt.Address(email="mailtrap@demomailtrap.com", name="Mailtrap Test"),
-        to=[mt.Address(email="nexussmailing@gmail.com")],
-        subject="You are awesome!",
-        text="Congrats for sending test email with Mailtrap!",
+        sender=mt.Address(email=os.getenv("FROM_EMAIL"), name="Nexuss Website Email"),
+        to=[mt.Address(email=os.getenv("TO_EMAIL"))],
+        subject=subject,
+        text=f"Sender Name: {sender_name}\nSender Email: {sender_email}\nMessage: {message}",
         category="Integration Test",
     )
 
-    client = mt.MailtrapClient(token="db6444aa41e41fb646aff56e5fd42322")
+    client = mt.MailtrapClient(token=os.getenv("MAIL_TOKEN"))
     client.send(mail)
 
-# @app.post('/send-email')
-# def send_email(request:Request):
-#     send_message()
-#     return {'message':'email send '}
+@app.post('/handle-email',status_code=status.HTTP_200_OK)
+def handle_email(request:email_template):
+    print("email request coming")
+    try:
+        #send_message(request.name , request.email , request.message , request.subject)
+        return "OK"
+    except Exception as e:
+        #for logging
+        print(e)
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR , detail="Error in sending email")
 

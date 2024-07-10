@@ -31,85 +31,13 @@ document.getElementsByClassName("services-link")[0].addEventListener("click" , (
 
 // a function to fetch pictures for slider
 function fetchImages(imagePaths){
-    return `
-                    <div class="row clients-testimonials" data-aos="fade-up">
-                    <div class="col-full">
-                        <div class="testimonials">
-                            <div>
-                                <img src="../static/images/testimonials/one.jpeg" alt="Author image">
-                            </div>
-        
-                            <div>
-                                <img src="../static/images/testimonials/second.jpeg" alt="Author image">
-                            </div>
-        
-                            <div>
-                                <img src="../static/images/testimonials/third.jpeg" alt="Author image">
-                            </div>
-        
-                            <div>
-                                <img src="../static/images/testimonials/four.jpeg" alt="Author image">
-                            </div>
-        
-                            <div>
-                                <img src="../static/images/testimonials/five.jpeg" alt="Author image">
-                            </div>
-        
-                            <div>
-                                <img src="../static/images/testimonials/six.jpeg" alt="Author image">
-                            </div>
-        
-                            <div>
-                                <img src="../static/images/testimonials/seven.jpeg" alt="Author image">
-                            </div>
-        
-                            <div>
-                                <img src="../static/images/testimonials/eight.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/nine.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/ten.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/eleven.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/twelve.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/thirteen.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/fourteen.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/fifteen.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/sixteen.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/seventeen.jpeg" alt="Author image">
-                            </div>
-                            
-                            <div>
-                                <img src="../static/images/testimonials/eighteen.jpeg" alt="Author image">
-                            </div>
-                            
-                        </div><!-- end testimonials -->
-                        
-                    </div> <!-- end col-full -->
-                </div> <!-- end client-testimonials -->
-    `;
+    let fullImagePaths = ``;
+    for(let i = 0;i < imagePaths.length;i++){
+        fullImagePaths += `
+            <div>
+                <img src="../static/images/${imagePaths[i]}" alt="Author image">
+            </div>
+        `;
+    }
+    return fullImagePaths;
 }

@@ -257,7 +257,7 @@
             adaptiveHeight: true,
             pauseOnFocus: false,
             autoplay: true, // Enable autoplay
-            autoplaySpeed: 1500, // Time in milliseconds before sliding to the next item            
+            autoplaySpeed: 1000, // Time in milliseconds before sliding to the next item            
             responsive: [
                 {
                     breakpoint: 1024, // Adjusted for a wider range of devices
@@ -346,24 +346,36 @@
             submitHandler: function(form) {
     
                 var sLoader = $('.submit-loader');
-    
+                console.log("sending form");
+
+                const payload = {
+                    "name": $("#contactName").val(),
+                    "email": $("#contactEmail").val(),
+                    "subject": $("#contactSubject").val(),
+                    "message": $("#contactMessage").val()
+                };
+
+                console.log(payload);
+
                 $.ajax({
     
                     type: "POST",
-                    url: "inc/sendEmail.php",
-                    data: $(form).serialize(),
+                    contentType: "application/json",
+                    url: "./handle-email",
+                    data: JSON.stringify(payload),
                     beforeSend: function() { 
     
                         sLoader.slideDown("slow");
     
                     },
                     success: function(msg) {
-    
+
                         // Message was sent
                         if (msg == 'OK') {
                             sLoader.slideUp("slow"); 
                             $('.message-warning').fadeOut();
-                            $('#contactForm').fadeOut();
+                            //$('#contactForm').fadeOut();
+                            $(form).trigger("reset");
                             $('.message-success').fadeIn();
                         }
                         // There was an error
@@ -371,6 +383,7 @@
                             sLoader.slideUp("slow"); 
                             $('.message-warning').html(msg);
                             $('.message-warning').slideDown("slow");
+                            console.log('warning stage');
                         }
     
                     },
