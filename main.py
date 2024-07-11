@@ -56,6 +56,21 @@ def get_spotify_service(request:Request):
     print("Youtube service request coming")
     return templates.TemplateResponse("youtube.html" , {"request": request})
 
+@app.get('/press-release',response_class=HTMLResponse)
+def get_press_release(request:Request):
+    print("press release request")
+    return templates.TemplateResponse("press.html" , {"request": request})
+
+@app.get('/apple-music' , response_class=HTMLResponse)
+def get_apple_music(request:Request):
+    print("Apple Music request coming")
+    return templates.TemplateResponse("apple-music.html" , {"request": request})
+
+@app.get('/refund-policy' , response_class=HTMLResponse)
+def get_refund_policy(request:Request):
+    print("refund policy request coming")
+    return templates.TemplateResponse("refund.html" , {"request": request})
+
 def send_message(sender_name:str , sender_email:str , message:str , subject:str):
     mail = mt.Mail(
         sender=mt.Address(email=os.getenv("FROM_EMAIL"), name="Nexuss Website Email"),
