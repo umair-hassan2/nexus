@@ -66,6 +66,10 @@ html {
     font-family: poppins;
 }
 
+.slick-dots{
+    display: none;
+}
+
 @media only screen and (max-width: 400px) {
     html {
         font-size: 9.411764705882353px;
@@ -2240,7 +2244,7 @@ html.no-csstransitions .home-content__main {
     border-right: none;
 }
 
-.stats__count {
+.stats__count,.stat__nan {
     font-family: "montserrat-bold", sans-serif;
     font-size: 8.4rem;
     line-height: 1;
@@ -2303,7 +2307,7 @@ html.no-csstransitions .home-content__main {
         font-size: 2rem;
         max-width: 600px;
     }
-    .stats__count {
+    .stats__count,.stat__nan {
         font-size: 8rem;
     }
     .stats h5 {
@@ -2359,7 +2363,7 @@ html.no-csstransitions .home-content__main {
     .about-desc {
         font-size: 1.8rem;
     }
-    .stats__count {
+    .stats__count,.stat__nan {
         font-size: 7.8rem;
     }
 }
