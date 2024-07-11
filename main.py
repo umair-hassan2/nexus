@@ -87,7 +87,7 @@ def send_message(sender_name:str , sender_email:str , message:str , subject:str)
 def handle_email(request:email_template):
     print("email request coming")
     try:
-        #send_message(request.name , request.email , request.message , request.subject)
+        send_message(request.name , request.email , request.message , request.subject)
         return "OK"
     except Exception as e:
         #for logging
