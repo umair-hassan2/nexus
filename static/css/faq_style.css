@@ -122,8 +122,14 @@
   }
 
   .stuff p{
-    margin-top: 2.5rem;
     margin-bottom: 1.5rem;
+  }
+
+  .stuff-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.6rem;
   }
 
   @media screen and (min-width: 580px) {

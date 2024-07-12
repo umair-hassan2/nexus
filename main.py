@@ -6,16 +6,21 @@ from fastapi.staticfiles import StaticFiles
 import mailtrap as mt
 from pydantic import BaseModel
 from dotenv import load_dotenv
+import stripe
 
 load_dotenv()
 
 app = FastAPI()
+stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 
 class email_template(BaseModel):
     name:str
     email:str
     message:str
     subject:str
+
+class checkout_template(BaseModel):
+    productId:str
 
 
 templates = Jinja2Templates(directory="templates")
@@ -70,6 +75,30 @@ def get_apple_music(request:Request):
 def get_refund_policy(request:Request):
     print("refund policy request coming")
     return templates.TemplateResponse("refund.html" , {"request": request})
+
+#create checkout session for user to pay
+@app.post('/create-checkout-session')
+def create_checkout_session(request:checkout_template):
+    print("create checkout session request coming")
+    try:
+        checkout_session = stripe.checkout.Session.create(
+            success_url="http://localhost:8000/payment-success",
+            cancel_url="http://localhost:8000/payment-cancel",
+            payment_method_types=["card"],
+            mode="subscription",
+            line_items=[
+                {
+                    "price":request.productId,
+                    "quantity":1
+                }
+            ]
+        )
+
+        return {"sessionId":checkout_session["id"]}
+    except Exception as e:
+        print(e)
+        
+    return {"sessionId":"session_id"}
 
 def send_message(sender_name:str , sender_email:str , message:str , subject:str):
     mail = mt.Mail(

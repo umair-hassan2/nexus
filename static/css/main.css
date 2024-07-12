@@ -2810,9 +2810,9 @@ html.no-csstransitions .home-content__main {
     padding: 0 0 3rem 0;
 }
 
-.clients-testimonials .testimonials__avatar {
-    height: 8.4rem;
-    width: 8.4rem;
+.clients-testimonials .testimonials__avatar , .testimonials__avatar{
+    height: 13rem;
+    width: 13rem;
     border-radius: 50%;
     margin: 0 auto 1.2rem auto;
 }
