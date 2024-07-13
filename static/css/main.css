@@ -2811,8 +2811,8 @@ html.no-csstransitions .home-content__main {
 }
 
 .clients-testimonials .testimonials__avatar , .testimonials__avatar{
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+    width: 12rem;
     border-radius: 50%;
     margin: 0 auto 1.2rem auto;
 }

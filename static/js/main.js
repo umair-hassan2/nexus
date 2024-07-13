@@ -272,7 +272,7 @@
                         slidesToShow: 1, // Show 1 slide at a time on very small screens
                         slidesToScroll: 1, // Scroll 1 slide at a time
                         arrows: false, // Optional: Hide arrows on very small screens
-                        dots: true // Optional: Show dots navigation on very small screens
+                        dots: false // Optional: Show dots navigation on very small screens
                     }
                 }
             ]

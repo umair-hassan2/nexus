@@ -76,14 +76,24 @@ def get_refund_policy(request:Request):
     print("refund policy request coming")
     return templates.TemplateResponse("refund.html" , {"request": request})
 
+@app.get('/payment-success' , response_class=HTMLResponse)
+def get_payment_success(request:Request):
+    print("payment success request incoming")
+    return templates.TemplateResponse("payment-success.html" , {"request":request})
+
+@app.get('/payment-cancel' , response_class=HTMLResponse)
+def get_payment_cancel(request:Request):
+    print("payment cancel request coming")
+    return templates.TemplateResponse("payment-cancel.html" , {"request":request})
+
 #create checkout session for user to pay
 @app.post('/create-checkout-session')
 def create_checkout_session(request:checkout_template):
     print("create checkout session request coming")
     try:
         checkout_session = stripe.checkout.Session.create(
-            success_url="http://localhost:8000/payment-success",
-            cancel_url="http://localhost:8000/payment-cancel",
+            success_url=f"{os.getenv("DOMAIN_NAME")}/payment-success",
+            cancel_url=f"{os.getenv("DOMAIN_NAME")}/payment-cancel",
             payment_method_types=["card"],
             mode="subscription",
             line_items=[
