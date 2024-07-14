@@ -24,6 +24,7 @@ async function getStripeSession(productId){
 
 async function redirectToCheckout(productId){
     const { sessionId } = await getStripeSession(productId);
+    console.log(`session id = ${sessionId}`);
     const { error } = await stripe.redirectToCheckout({
         sessionId
     });
